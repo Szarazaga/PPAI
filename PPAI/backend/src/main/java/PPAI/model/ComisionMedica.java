@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "ComisionesMedicas")
+@Table(name = "comisiones_medicas")
 public class ComisionMedica {
     @Id
     @Column(nullable = false, unique = true, length = 50)
@@ -29,6 +29,9 @@ public class ComisionMedica {
     }
     public String getCodigo(){
         return this.codigo;
+    }
+    public String getNombre(){
+        return this.nombre;
     }
 
     public boolean esTuCodigo(String codigo){

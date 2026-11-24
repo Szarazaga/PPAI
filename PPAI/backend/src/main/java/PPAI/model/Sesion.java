@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Sesiones")
+@Table(name = "sesiones")
 public class Sesion {
     @Id
     @Temporal(TemporalType.TIMESTAMP)
@@ -30,6 +30,9 @@ public class Sesion {
 
     public Usuario getUsuario(){
         return this.usuario;
+    }
+    public void finalizar(Date fechaHoraFin){
+        this.fechaHoraFin = fechaHoraFin;
     }
 
     

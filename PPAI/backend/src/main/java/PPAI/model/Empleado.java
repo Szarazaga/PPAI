@@ -3,7 +3,7 @@ package PPAI.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Empleados")
+@Table(name = "empleados")
 @IdClass(EmpleadoId.class)
 public class Empleado {
 
@@ -42,8 +42,9 @@ public class Empleado {
         this.usuario = usuario;
     }
 
-    public boolean sosGCM(){
-        return this.rol.esGCM();
+    public String getEmail(){return this.email;}
+    public boolean sosGCM(String codigoCM){
+        return this.comisionMedica.getCodigo().equals(codigoCM) && this.rol.esGCM(); //Validar si es GCM de una determinada CM
     }
     public String obtenerCodigoCM(){
         return this.comisionMedica.getCodigo();

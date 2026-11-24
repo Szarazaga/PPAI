@@ -14,7 +14,7 @@ public class Bolsin {
     private int numeroBolsin ;
 
     @Column(nullable = false)
-    private Integer numeroPrecinto;
+    private int numeroPrecinto;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
@@ -67,10 +67,16 @@ public class Bolsin {
     public int getNroBolsin() {
         return this.numeroBolsin;
     }
+    public int getNroPrecinto(){return this.numeroPrecinto;}
+    public ComisionMedica getCMDestino(){return this.destino;}
 
     public boolean esTuCMOrigen(String codigoCM) {
 
         return this.origen.esTuCodigo(codigoCM);
+    }
+
+    public boolean esTuCMDestino(String codigoCM){
+        return this.destino.esTuCodigo(codigoCM);
     }
 
 

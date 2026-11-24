@@ -13,7 +13,7 @@ public class AdaptadorGPSXTR4500L implements IAdaptadorGPSTracker {
 
     public AdaptadorGPSXTR4500L(String apiKey) {
 
-        this.apiKey = "sk_xtr_9F3a7C21bE6d4A10f2c8e5b7d913"; //ApiKey hardcodeada
+        this.apiKey = apiKey; //ApiKey hardcodeada
         this.servicio = new ServicioGPSXTR4500L();
     }
 

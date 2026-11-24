@@ -4,13 +4,10 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "CambiosEstadosBolsin")
+@Table(name = "cambios_estado_bolsin")
 public class CambioEstadoBolsin {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date fechaHoraInicio;
@@ -19,7 +16,7 @@ public class CambioEstadoBolsin {
     private Date fechaHoraFin;
 
     @ManyToOne
-    @JoinColumn(name = "estado_id")
+    @JoinColumn(name = "estado")
     private Estado estado;
 
     //Construtor para JPA
