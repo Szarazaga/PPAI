@@ -4,7 +4,7 @@ import PPAI.dto.XtrResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdaptadorGPSGeoPulseMTR900 {
+public class AdaptadorGPSGeoPulseMTR900 implements IAdaptadorGPSTracker {
   
     private String apiKey;
     private final ServicioGPSGeoPulseMTR900 servicio;
@@ -18,6 +18,6 @@ public class AdaptadorGPSGeoPulseMTR900 {
 
     @Override
     public List<String[]> obtenerUbicacionBolsines(List<Integer> numerosBolsines, String cmOrigen, String CMDestino) {
-
+        return null;
     }
 }
