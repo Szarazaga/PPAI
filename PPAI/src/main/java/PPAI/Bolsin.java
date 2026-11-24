@@ -17,7 +17,12 @@ public class Bolsin {
         this.peso = peso;
     }
     public boolean sosEnviado() {
-        return this.cambioEstadoBolsin.sosEnviado();
+        for (CambioEstadoBolsin cambio : this.cambioEstadoBolsin) {
+            if (cambio.sosActual() && cambio.sosEnviado()) {
+                return true;
+            }
+        }
+        return false;
     }
     public int getNroBolsin() {
         return this.numeroBolsin;
