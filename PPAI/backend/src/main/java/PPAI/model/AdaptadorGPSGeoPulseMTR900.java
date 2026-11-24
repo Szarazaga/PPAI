@@ -7,13 +7,13 @@ import java.util.List;
 public class AdaptadorGPSGeoPulseMTR900 {
   
     private String apiKey;
-    private final ServicioGPSXTR4500L servicio;
+    private final ServicioGPSGeoPulseMTR900 servicio;
 
 
     public AdaptadorGPSGeoPulseMTR900(String apiKey) {
 
         this.apiKey = apiKey; //ApiKey hardcodeada
-        this.servicio = new ServicioGPSXTR4500L();
+        this.servicio = new ServicioGPSGeoPulseMTR900();
     }
 
     @Override
