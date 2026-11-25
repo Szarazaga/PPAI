@@ -27,6 +27,7 @@ import MapaBolsines from '../components/MapaBolsines';
 import ModalConfirmacion from '../components/ModalConfirmacion';
 import Stepper from '../components/Stepper';
 import TablaBolsines from '../components/TablaBolsines';
+import loginHero from '../assets/login-hero.jpg';
 
 const CM_INICIAL = {
   codigoCM: 'CM-CBA-01',
@@ -275,49 +276,66 @@ export default function PantecaEncargado() {
   if (pasoActual === 'LOGIN') {
     return (
       <div className="login-shell login-shell--wizard">
-        <div className="login-box">
-          <div className="login-box-mark">
-            <LockKeyhole size={24} />
+        <aside className="login-hero">
+          <img
+            className="login-hero-img"
+            src={loginHero}
+            alt="Agente de Correo Nacional cargando bolsines en la camioneta"
+          />
+          <div className="login-hero-overlay">
+            <span className="login-hero-tag">Correo Nacional</span>
+            <h1 className="login-hero-heading">Sistema de Gestión de Bolsines</h1>
+            <p className="login-hero-desc">
+              Seguimiento y trazabilidad de los bolsines entre las Comisiones Médicas
+              y las sucursales.
+            </p>
           </div>
-          <h2 className="login-box-title">Iniciar sesión</h2>
-          <p className="login-box-subtitle">Acceso exclusivo para Encargados de Bolsines</p>
-          <form className="login-form-vertical" onSubmit={onLogin} noValidate>
-            <div className="form-group">
-              <label className="form-label" htmlFor="wizard-usuario">Usuario</label>
-              <div className="input-icon-wrap">
-                <User size={16} className="input-icon" />
-                <input id="wizard-usuario" className="form-control" value={usuario}
-                  onChange={(e) => setUsuario(e.target.value)}
-                  autoComplete="username" disabled={loadingLogin} />
+        </aside>
+        <main className="login-main">
+          <div className="login-box">
+            <div className="login-box-mark">
+              <LockKeyhole size={24} />
+            </div>
+            <h2 className="login-box-title">Iniciar sesión</h2>
+            <p className="login-box-subtitle">Acceso exclusivo para Encargados de Bolsines</p>
+            <form className="login-form-vertical" onSubmit={onLogin} noValidate>
+              <div className="form-group">
+                <label className="form-label" htmlFor="wizard-usuario">Usuario</label>
+                <div className="input-icon-wrap">
+                  <User size={16} className="input-icon" />
+                  <input id="wizard-usuario" className="form-control" value={usuario}
+                    onChange={(e) => setUsuario(e.target.value)}
+                    autoComplete="username" disabled={loadingLogin} />
+                </div>
               </div>
-            </div>
-            <div className="form-group">
-              <label className="form-label" htmlFor="wizard-contrasena">Contraseña</label>
-              <div className="input-icon-wrap">
-                <LockKeyhole size={16} className="input-icon" />
-                <input id="wizard-contrasena" type={mostrarContrasena ? 'text' : 'password'}
-                  className="form-control has-action" value={contrasena}
-                  onChange={(e) => setContrasena(e.target.value)} autoComplete="current-password"
-                  disabled={loadingLogin} />
-                <button type="button" className="input-action" onClick={() => setMostrarContrasena(!mostrarContrasena)}
-                  tabIndex={-1}><EyeOff size={16} /></button>
+              <div className="form-group">
+                <label className="form-label" htmlFor="wizard-contrasena">Contraseña</label>
+                <div className="input-icon-wrap">
+                  <LockKeyhole size={16} className="input-icon" />
+                  <input id="wizard-contrasena" type={mostrarContrasena ? 'text' : 'password'}
+                    className="form-control has-action" value={contrasena}
+                    onChange={(e) => setContrasena(e.target.value)} autoComplete="current-password"
+                    disabled={loadingLogin} />
+                  <button type="button" className="input-action" onClick={() => setMostrarContrasena(!mostrarContrasena)}
+                    tabIndex={-1}><EyeOff size={16} /></button>
+                </div>
               </div>
+              {errorLogin && <p className="login-error"><XCircle size={16} /> {errorLogin}</p>}
+              <div className="login-actions">
+                <button type="submit" className="btn btn-primary login-submit" disabled={loadingLogin}>
+                  {loadingLogin ? 'Verificando...' : 'Ingresar al sistema'}
+                </button>
+                <button type="button" className="btn btn-ghost login-quick" onClick={onQuickLogin} disabled={loadingLogin}>
+                  Ingresar como encargado1
+                </button>
+              </div>
+            </form>
+            <div className="login-demo">
+              <span className="login-demo-label">Credenciales de prueba</span>
+              <span>Usuario <code>encargado1</code> · Contraseña <code>1234</code></span>
             </div>
-            {errorLogin && <p className="login-error"><XCircle size={16} /> {errorLogin}</p>}
-            <div className="login-actions">
-              <button type="submit" className="btn btn-primary login-submit" disabled={loadingLogin}>
-                {loadingLogin ? 'Verificando...' : 'Ingresar al sistema'}
-              </button>
-              <button type="button" className="btn btn-ghost login-quick" onClick={onQuickLogin} disabled={loadingLogin}>
-                Ingresar como encargado1
-              </button>
-            </div>
-          </form>
-          <div className="login-demo">
-            <span className="login-demo-label">Credenciales de prueba</span>
-            <span>Usuario <code>encargado1</code> · Contraseña <code>1234</code></span>
           </div>
-        </div>
+        </main>
       </div>
     );
   }
