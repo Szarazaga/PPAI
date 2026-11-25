@@ -416,7 +416,7 @@ export default function PantecaEncargado() {
             </div>
             {ubicaciones.length > 0 && (
               <div className="step2-note"><Send size={15} />
-                <span><strong>Paso 7:</strong> pulse “Seleccionar Bolsín” en el mapa o en la tabla.</span>
+                <span>Pulse “Seleccionar Bolsín” en el mapa o en la tabla.</span>
               </div>
             )}
           </div>
