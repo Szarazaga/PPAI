@@ -1,7 +1,5 @@
 package PPAI.model;
 
-import PPAI.dto.XtrResponse;
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdaptadorGPSNavTrackQX7A implements IAdaptadorGPSTracker {

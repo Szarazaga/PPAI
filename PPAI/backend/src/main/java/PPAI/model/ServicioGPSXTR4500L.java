@@ -1,5 +1,4 @@
 package PPAI.model;
-import PPAI.dto.XtrResponse;
 import org.springframework.web.client.RestClient;
 
 public class ServicioGPSXTR4500L {
@@ -11,8 +10,8 @@ public class ServicioGPSXTR4500L {
                 .build();
     }
 
-    public XtrResponse.ItemBolsin getBolsinLocation(String apiKey, Integer nroBolsin, String cmOrigen){
-        XtrResponse response = restClient.get()
+    public String getBolsinLocation(String apiKey, Integer nroBolsin, String cmOrigen) {
+        return restClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/api/xtr-4500l/getBolsinLocation")
                         .queryParam("numeroBolsin", nroBolsin)
@@ -20,11 +19,7 @@ public class ServicioGPSXTR4500L {
                         .build())
                 .header("X-API-Key", apiKey)
                 .retrieve()
-                .body(XtrResponse.class);
-        if (response != null && response.items() != null && !response.items().isEmpty()) {
-            return response.items().get(0);
-        }
-        return null;
+                .body(String.class);
     }
     
     

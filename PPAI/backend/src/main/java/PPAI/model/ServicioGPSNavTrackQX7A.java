@@ -1,5 +1,4 @@
 package PPAI.model;
-import PPAI.dto.XtrResponse;
 import org.springframework.web.client.RestClient;
 
 public class ServicioGPSNavTrackQX7A {
@@ -12,8 +11,8 @@ public class ServicioGPSNavTrackQX7A {
                 .build();
     }
 
-    public XtrResponse.ItemBolsin retrieveTrackingData(String apiKey, Integer nroBolsin, String cmDestino){
-        XtrResponse response = restClient.get()
+    public String retrieveTrackingData(String apiKey, Integer nroBolsin, String cmDestino) {
+        return restClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/api/navtrack-qx-7a/retrieveTrackingData")
                         .queryParam("numeroBolsin", nroBolsin)
@@ -21,11 +20,7 @@ public class ServicioGPSNavTrackQX7A {
                         .build())
                 .header("X-API-Key", apiKey)
                 .retrieve()
-                .body(XtrResponse.class);
-        if (response != null && response.items() != null && !response.items().isEmpty()) {
-            return response.items().get(0);
-        }
-        return null;
+                .body(String.class);
     }
 
 }

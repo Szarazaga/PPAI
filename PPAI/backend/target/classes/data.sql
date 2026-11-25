@@ -106,6 +106,51 @@ VALUES (112, 5012, '2026-03-07 10:15:00', 3.1, 'CM-CBA-01', 'CM-SLA-01');
 INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
 VALUES (113, 5013, '2026-03-07 10:30:00', 2.6, 'CM-CBA-01', 'CM-MDQ-01');
 
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (114, 5014, '2026-03-07 10:40:00', 2.4, 'CM-CBA-01', 'CM-ROS-02');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (115, 5015, '2026-03-07 10:45:00', 3.0, 'CM-CBA-01', 'CM-MDZ-03');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (116, 5016, '2026-03-07 10:50:00', 2.2, 'CM-CBA-01', 'CM-BA-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (117, 5017, '2026-03-07 10:55:00', 1.9, 'CM-CBA-01', 'CM-TUC-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (118, 5018, '2026-03-07 11:00:00', 3.5, 'CM-CBA-01', 'CM-SLA-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (119, 5019, '2026-03-07 11:05:00', 2.7, 'CM-CBA-01', 'CM-JUJ-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (120, 5020, '2026-03-07 11:10:00', 2.1, 'CM-CBA-01', 'CM-NQN-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (121, 5021, '2026-03-07 11:15:00', 3.2, 'CM-CBA-01', 'CM-MDQ-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (122, 5022, '2026-03-07 11:20:00', 1.7, 'CM-CBA-01', 'CM-LPL-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (123, 5023, '2026-03-07 11:25:00', 2.9, 'CM-CBA-01', 'CM-ROS-02');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (124, 5024, '2026-03-07 11:30:00', 2.5, 'CM-CBA-01', 'CM-MDZ-03');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (125, 5025, '2026-03-07 11:35:00', 3.8, 'CM-CBA-01', 'CM-BA-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (126, 5026, '2026-03-07 11:40:00', 2.0, 'CM-CBA-01', 'CM-TUC-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (127, 5027, '2026-03-07 11:45:00', 3.3, 'CM-CBA-01', 'CM-LPL-01');
+
+INSERT INTO bolsines (numero_bolsin, numero_precinto, fecha, peso, cm_origen_codigo, cm_destino_codigo)
+VALUES (128, 5028, '2026-03-07 11:50:00', 2.6, 'CM-CBA-01', 'CM-NQN-01');
+
 -- 7. Cambios de Estado (historial completo: Creado -> Cerrado -> Enviado para los 10 bolsines)
 
 -- Bolsín 101
@@ -211,3 +256,123 @@ INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bo
 VALUES ('2026-03-07 11:03:00', '2026-03-07 12:33:00', 'Cerrado', 113);
 INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
 VALUES ('2026-03-07 12:33:00', NULL, 'Enviado', 113);
+
+-- Bolsín 114
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 10:40:01', '2026-03-07 11:40:01', 'Creado', 114);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:40:01', '2026-03-07 12:40:01', 'Cerrado', 114);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:40:01', NULL, 'Enviado', 114);
+
+-- Bolsín 115
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 10:45:02', '2026-03-07 11:45:02', 'Creado', 115);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:45:02', '2026-03-07 12:45:02', 'Cerrado', 115);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:45:02', NULL, 'Enviado', 115);
+
+-- Bolsín 116
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 10:50:03', '2026-03-07 11:50:03', 'Creado', 116);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:50:03', '2026-03-07 12:50:03', 'Cerrado', 116);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:50:03', NULL, 'Enviado', 116);
+
+-- Bolsín 117
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 10:55:04', '2026-03-07 11:55:04', 'Creado', 117);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:55:04', '2026-03-07 12:55:04', 'Cerrado', 117);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:55:04', NULL, 'Enviado', 117);
+
+-- Bolsín 118
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:00:05', '2026-03-07 12:00:05', 'Creado', 118);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:00:05', '2026-03-07 13:00:05', 'Cerrado', 118);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:00:05', NULL, 'Enviado', 118);
+
+-- Bolsín 119
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:05:06', '2026-03-07 12:05:06', 'Creado', 119);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:05:06', '2026-03-07 13:05:06', 'Cerrado', 119);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:05:06', NULL, 'Enviado', 119);
+
+-- Bolsín 120
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:10:07', '2026-03-07 12:10:07', 'Creado', 120);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:10:07', '2026-03-07 13:10:07', 'Cerrado', 120);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:10:07', NULL, 'Enviado', 120);
+
+-- Bolsín 121
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:15:08', '2026-03-07 12:15:08', 'Creado', 121);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:15:08', '2026-03-07 13:15:08', 'Cerrado', 121);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:15:08', NULL, 'Enviado', 121);
+
+-- Bolsín 122
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:20:09', '2026-03-07 12:20:09', 'Creado', 122);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:20:09', '2026-03-07 13:16:09', 'Cerrado', 122);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:16:09', NULL, 'Enviado', 122);
+
+-- Bolsín 123
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:25:10', '2026-03-07 12:25:10', 'Creado', 123);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:25:10', '2026-03-07 13:18:10', 'Cerrado', 123);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:18:10', NULL, 'Enviado', 123);
+
+-- Bolsín 124
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:30:11', '2026-03-07 12:30:11', 'Creado', 124);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:30:11', '2026-03-07 13:20:11', 'Cerrado', 124);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:20:11', NULL, 'Enviado', 124);
+
+-- Bolsín 125
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:35:12', '2026-03-07 12:35:12', 'Creado', 125);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:35:12', '2026-03-07 13:22:12', 'Cerrado', 125);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:22:12', NULL, 'Enviado', 125);
+
+-- Bolsín 126
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:40:13', '2026-03-07 12:40:13', 'Creado', 126);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:40:13', '2026-03-07 13:25:13', 'Cerrado', 126);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:25:13', NULL, 'Enviado', 126);
+
+-- Bolsín 127
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:45:14', '2026-03-07 12:45:14', 'Creado', 127);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:45:14', '2026-03-07 13:28:14', 'Cerrado', 127);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:28:14', NULL, 'Enviado', 127);
+
+-- Bolsín 128
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 11:50:15', '2026-03-07 12:50:15', 'Creado', 128);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 12:50:15', '2026-03-07 13:30:15', 'Cerrado', 128);
+INSERT INTO cambios_estado_bolsin (fecha_hora_inicio, fecha_hora_fin, estado, bolsin_numero)
+VALUES ('2026-03-07 13:30:15', NULL, 'Enviado', 128);
